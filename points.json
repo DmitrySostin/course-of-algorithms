@@ -1,0 +1,29 @@
+{
+    "points": [
+        {"id": "S", "name": "Earth", "x": 540, "y": 350, "connections": ["A", "B", "G"]},
+        {"id": "A", "name": "Sadr", "x": 743, "y": 626, "connections": ["S", "D", "J"]},
+        {"id": "B", "name": "Markab", "x": 426, "y": 96, "connections": ["S", "N", "O"]},
+        {"id": "C", "name": "Menkalinan", "x": 365, "y": 666, "connections": ["G", "J", "K"]},
+        {"id": "D", "name": "Altair", "x": 909, "y": 597, "connections": ["A", "E", "M"]},
+        {"id": "E", "name": "Sulafat", "x": 910, "y": 349, "connections": ["D", "L", "M"]},
+        {"id": "F", "name": "Kornephoros", "x": 130, "y": 18, "connections": ["K", "O", "P"]},
+        {"id": "G", "name": "Betelgese", "x": 468, "y": 446, "connections": ["S", "C", "L"]},
+        {"id": "H", "name": "Polaris", "x": 252, "y": 161, "connections": ["O", "P", "N"]},
+        {"id": "J", "name": "Regulus", "x": 654, "y": 624, "connections": ["A", "C", "L"]},
+        {"id": "K", "name": "Schedar", "x": 71, "y": 568, "connections": ["C", "F", "O"]},
+        {"id": "L", "name": "Etamin", "x": 695, "y": 464, "connections": ["E", "G", "J"]},
+        {"id": "M", "name": "Kaus Australis", "x": 833, "y": 425, "connections": ["D", "E", "P"]},
+        {"id": "N", "name": "Dschubba", "x": 570, "y": 99, "connections": ["B", "H", "O"]},
+        {"id": "O", "name": "Ras Elased", "x": 94, "y": 182, "connections": ["B", "F", "K"]},
+        {"id": "P", "name": "Arktur", "x": 431, "y": 343, "connections": ["F", "H", "M", "J"]}
+    ],
+    "orders": [
+        {"id": "order1", "point_id": "A", "weight": 5.2, "volume": 2.1, "priority": "high"},
+        {"id": "order2", "point_id": "B", "weight": 3.0, "volume": 1.5, "priority": "low"},
+        {"id": "order3", "point_id": "C", "weight": 10.0, "volume": 5.0, "priority": "medium"}
+    ],     
+    "vehicles": [
+        {"id": "van1", "max_weight": 5, "max_volume": 10, "speed": 60},
+        {"id": "bike1", "max_weight": 20, "max_volume": 1, "speed": 25}
+    ]
+}

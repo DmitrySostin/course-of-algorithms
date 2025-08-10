@@ -3,9 +3,9 @@ import pygame
 import json
 
 
-fps = 30                                            #  количество кадров в секунду
-H = 1080
-W = 700
+fps = 30                                            # Количество кадров в секунду
+H = 1080                                            # Ширина экрана
+W = 700                                             # Высота экрана
 WHITE = (255, 255, 255)
 RED = (255, 0, 0)
 GREEN = (0, 255, 0)
@@ -32,14 +32,25 @@ def main():
 
     screen.fill(WHITE)
     font = pygame.font.SysFont('couriernew', 10)
-    #text = font.render("Hello", True, (255, 0, 0))
-    #screen.blit(text, (50, 50))
-
+   
+    # прориссовка графов поинтов и рёбер пути соеденения
     for i in range(16):
         pygame.draw.circle(screen, GREEN, (points[i]["x"], points[i]["y"]), 15, width=3)
         text = font.render(points[i]['name'], True, BLUE)
         screen.blit(text, (points[i]["x"] + 25, points[i]["y"] -5))
-        print(points[i]['name'], points[i]["x"], points[i]["y"])
+        #print(points[i]['name'], points[i]["x"], points[i]["y"])
+        for coint_id in points[i]['connections']:
+            if coint_id is not None:
+                print(points[i]['name'], '-', coint_id)
+                for to_point in points:
+                    if to_point['id'] == coint_id:
+                        pygame.draw.line(screen, BLUE, (points[i]["x"], points[i]["y"]), (to_point['x'], to_point['y']), 1)
+
+    
+
+    
+
+        
     
 
     run = True

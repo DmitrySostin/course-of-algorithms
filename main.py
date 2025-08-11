@@ -1,6 +1,7 @@
 """  Main file algoritm  """
 import pygame
 import json
+from deyksty import find_shortest_path
 
 
 fps = 30                                            # Количество кадров в секунду
@@ -75,3 +76,14 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+        # Пример работы:
+    start = "S"  # Склад (Earth)
+    end = "A"    # Точка доставки (Sadr)
+
+    # Вычисляем маршрут
+    route = find_shortest_path(start, end)
+
+    # Результат:
+    print(f"Кратчайший путь от {start} до {end}: {route}")
